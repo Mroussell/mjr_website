@@ -7,16 +7,24 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
-
 		<div class="topnav" id="myTopnav">
-			<a href="#home" class="active">Home</a>
-			<a href="#portfolio">Portfolio</a>
-			<a href="#contact">Contact</a>
-		  	<a href="#blog">AI Blog</a>		  	
+			<a href="{{ url_for('home') }}" class="active">Home</a>
+			<a href="{{ url_for('portfolio') }}" >Portfolio</a>
+			<a href="{{ url_for('contact') }}">Contact</a>
+		  	<a href="{{ url_for('blog') }}">AI Blog</a>		  	
 		  	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-		    	<i class="fa fa-bars"></i>
+		    	<i class="gotopage"></i>
 		  	</a>
 		</div>
+
+		<div class="banner-wrapper">
+    		<div class="banner">
+    			<div class="banner-img-div" id="banner-img"></div>
+    			<div class="banner-overlay-div" id="banner-overlay"> </div>
+    			<div class="banner-icon-div" id="banner-icon"> </div>
+    		</div>
+		</div>
+
 
 		<div>
 			<h1>Michael J. Roussell</h1>
