@@ -102,6 +102,9 @@ body {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  margin-left: 5px; 
+  margin-right: 5px;
+  padding: 0;
 }
   
 .div1 { grid-area: 1 / 1 / 2 / 2; }
