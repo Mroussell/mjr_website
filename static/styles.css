@@ -6,6 +6,20 @@ body {
   margin-right: 0px;
   padding: 0;
 }
+
+@font-face {
+  font-family: Forum;
+  src: url(./fonts/Forum-Regular.ttf);
+}
+
+hr.rounded {
+  border-top: 5px solid #1b1b1fe0;
+  border-bottom: 5px solid #1b1b1fe0;
+  border-radius: 10px;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
 /*-----Top Navigation Styling-----*/
 /* Add a black background color to the top navigation */
 .topnav {
@@ -104,65 +118,59 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+/*----- Title and Description Styling -----*/
+.title {
+  margin-right: 100px;
+  margin-left: 80px;
+}
+.title h1 {
+  color: #006088;
+  font-family: Forum;
+  font-size: 400%;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.title p {
+  text-align: left;
+}
 
 /*----- Menu List Styling -----*/
-.menu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  margin-left: 0x; 
-  margin-right: 0px;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.menu-item {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
 }
 
-.menu div:hover {
-  max-width: 100%;
-  background: black;
-  background: linear-gradient(
-    60deg,
-    rgba(0, 0, 0, 0.7777485994397759) 10%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-/* Menu Images Styling */
-.menu_image > img{
-  object-fit: cover;
-  max-width: 30vw;
-  max-height: 20vw;
-  width: 33vw;
-  height: 50vh;
-  border-radius: 25px;
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.25); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .25s ease;
+  opacity:0;
+  color: white;
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+}
 
-/*- Menu Grid Stylings -*/
-.menu1-img-div { grid-area: 1 / 1 / 2 / 2; }
-.menu1-hover-div { grid-area: 1 / 1 / 2 / 2; }
-.menu1-txt-div { grid-area: 1 / 1 / 2 / 2; }
+/* When you mouse over the container, fade in the overlay title */
+.menu-item:hover .overlay {
+  opacity: 1;
+}
 
 
-.menu2-img-div { grid-area: 1 / 2 / 2 / 3; }
-.menu2-hover-div { grid-area: 1 / 2 / 2 / 3; }
-.menu2-txt-div { grid-area: 1 / 2 / 2 / 3; }
-
-
-.menu3-img-div { grid-area: 1 / 3 / 2 / 4; }
-.menu3-hover-div { grid-area: 1 / 3 / 2 / 4; }
-.menu3-txt-div { grid-area: 1 / 3 / 2 / 4; }
-
-.menu4-img-div { grid-area: 2 / 1 / 3 / 2; }
-.menu4-hover-div { grid-area: 2 / 1 / 3 / 2; }
-.menu4-txt-div { grid-area: 2 / 1 / 3 / 2; }
-
-.menu5-img-div { grid-area: 2 / 2 / 3 / 3; }
-.menu5-hover-div { grid-area: 2 / 2 / 3 / 3; }
-.menu5-txt-div { grid-area: 2 / 2 / 3 / 3; }
-
-.menu6-img-div { grid-area: 2 / 3 / 3 / 4; }
-.menu6-hover-div { grid-area: 2 / 3 / 3 / 4; }
-.menu6-txt-div { grid-area: 2 / 3 / 3 / 4; }
