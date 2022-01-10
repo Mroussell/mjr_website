@@ -1,5 +1,6 @@
 /*-----Body Styling-----*/
 body {
+  height: 100%;
   margin-top: 0px; 
   margin-bottom: 0px; 
   margin-left: 0px; 
@@ -86,16 +87,18 @@ hr.rounded {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   overflow: hidden;
+  background-attachment: fixed;
 }
 
 /* Banner Background image styling*/
 .banner-img-div { grid-area: 1 / 1 / 2 / 2; }
 #banner-img {
   width: 100%;
-  background-image: url(../static/tech_photo.jpg);
   height: 824px;
   background-color: darkgrey;
   background-position: center;
+  background-image: url(../static/tech_photo.jpg);
+  background-attachment: fixed;
 }
 
 /* Gradient overlay grid styping for banner object*/
@@ -109,6 +112,7 @@ hr.rounded {
     rgba(0, 0, 0, 0.7777485994397759) 10%,
     rgba(255, 255, 255, 0) 100%
   );
+  background-attachment: fixed;
 }
 /* Icon styling for banner */
 .banner-icon-div { grid-area: 1 / 1 / 2 / 2; }
@@ -117,60 +121,44 @@ hr.rounded {
   background-image: url(../static/MJR-orange-logo.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: scroll;
 }
 /*----- Title and Description Styling -----*/
 .title {
+  position: relative;
   margin-right: 100px;
   margin-left: 80px;
+  background-attachment: fixed;
+
 }
 .title h1 {
-  color: #006088;
+  color: #000800;
   font-family: Forum;
   font-size: 400%;
-  text-align: left;
+  text-align: center;
+  margin-top: 16px;
   margin-bottom: 16px;
 }
 
 .title p {
-  text-align: left;
+  text-align: justify;
+  text-justify: auto;
 }
 
 /*----- Menu List Styling -----*/
-* {box-sizing: border-box}
-
-/* Container needed to position the overlay. Adjust the width as needed */
-.menu-item {
+.project-img1 {
   position: relative;
-  width: 50%;
-  max-width: 300px;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/* Make the image to responsive */
-.image {
-  display: block;
+.project-img1 {
+  background-image: url(../static/images/tech_project.jpg);
   width: 100%;
-  height: auto;
 }
 
-/* The overlay effect - lays on top of the container and over the image */
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.25); /* Black see-through */
-  color: #f1f1f1;
-  width: 100%;
-  transition: .25s ease;
-  opacity:0;
-  color: white;
-  font-size: 24px;
-  padding: 20px;
-  text-align: center;
-}
-
-/* When you mouse over the container, fade in the overlay title */
-.menu-item:hover .overlay {
-  opacity: 1;
-}
 
 
