@@ -11,7 +11,8 @@
 			<a href="{{ url_for('portfolio') }}" >Portfolio</a>
 			<a href="{{ url_for('contact') }}">Contact</a>
 		  	<a href="{{ url_for('blog') }}">AI Blog</a>
-			<a id="github" href="https://github.com/Mroussell"><i class="fa fa-github"></i></a>		  	
+			<a id="github" href="https://github.com/Mroussell"><i class="fa fa-github"></i></a>
+			<a id="music" href="https://soundcloud.com/music-mjr"><i class="fa fa-soundcloud"></i></a>			  	
 		  	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		    	<i class="gotopage"></i>
 		  	</a>
@@ -26,9 +27,68 @@
 
 		<div class="title">
 			<h1>Michael J. Roussell</h1>
-			<p>Hi all, I'm a software developer, data analyst, technology enthusiast, and musician. Checkout my current projects, past projects, academic work, and personal AI blog. This is a little site I created using Python, Html, and CSS. The first category of project included are my techinical web, mobile, and system apps. Next are my data science projects. As an added bonus, I included some of my audio work, incuding original tracks and simple programming projects. Lastly in the works is an automated AI blog that is currently be trained to created to generate meme blog post jsut for fun. My contact information can be found on the contact page. Look forward to exploring the tech world with you all. I hope you have fun exploring!  </p>
+			<p>Hi all, I'm a software developer, data scientist, technology enthusiast, and musician. Here you can checkout my current projects, past projects, academic work, and personal AI blog. This is a little site I created using Python, HTML, and CSS. The first category of project included are my techinical web, mobile, and system apps. Next are my data science projects. As an added bonus, I included some of my audio work, incuding original tracks and simple programming projects. Lastly in the works is an automated AI blog that is currently be trained to generate blog post using a nueral network. My contact information can be found on the contact page. I look forward to exploring the tech world with you all. I hope you have fun exploring!  </p>
 		</div>
 
-	 	<div class="project-img1"></div>
+	 	<div class="banner">
+			<div class="banner-img-div" id="banner-img2">
+				<div class="banner-title-div" id="banner-title2">
+					<span class="border">Technical Projects</span>
+				</div>	
+				<a href="{{ url_for('portfolio') }}" class="banner-link"></a>
+			</div>
+		</div>
+
+		<div class="title">
+			<p>Linked above I have a collection of projects including web app interfacing, system level programming, mobile app developement, and data sciences. If you have any interest in learning more about you can contact me on my contact page.</p>
+		</div>
+
+		<div class="banner">
+			<div class="banner-img-div" id="banner-img3">
+				<div class="banner-title-div" id="banner-title2">
+					<span class="border">Data Projects</span>
+				</div>	
+				<a href="{{ url_for('portfolio') }}" class="banner-link"></a>
+			</div>
+		</div>
+
+		<div class="title">
+			<p>Recently I have gained a large interest in data. Whether processing, collection, cleaning, or use of it, I believe I have found a great many avenues to explore and discover.</p>
+		</div>
+
+		<div class="banner">
+			<div class="banner-img-div" id="banner-img4">
+				<div class="banner-title-div" id="banner-title2">
+					<span class="border">Music</span>
+				</div>	
+				<a href="{{ url_for('portfolio') }}" class="banner-link"></a>
+			</div>
+		</div>
+
+		<div class="title">
+			<p>I come from a music background where I was a jazz guitarist in New Orleans, Lousiana before I moved to Atlanta, Georgia to persure my efforts in tech. Here are some of my projects and tracks linked above.</p>
+		</div>
+
+		<div class="banner">
+			<div class="banner-img-div" id="banner-img5">
+				<div class="banner-title-div" id="banner-title2">
+					<span class="border">AI Blog</span>
+				</div>	
+				<a href="{{ url_for('blog') }}" class="banner-link"></a>
+			</div>
+		</div>
+
+		<div class="title">
+			<p>With my attention being brought to data recently, I have tried pushing my limits and am currenlt trying to train an AI to post weekly blog post for me. Currently, this is still under construction, but to go my GitHub to find out more!</p>
+		</div>
+
+		<div class="banner">
+			<div class="banner-img-div" id="banner-img6">
+				<div class="banner-title-div" id="banner-title2">
+					<span class="border">Contact</span>
+				</div>	
+				<a href="{{ url_for('contact') }}" class="banner-link"></a>
+			</div>
+		</div>
 	</body>
 </html>
