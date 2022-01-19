@@ -5,3 +5,6 @@ __pycache__/
 
 MacOS Files
 .DS_Store
+
+# Env Files
+.env

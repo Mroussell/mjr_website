@@ -13,15 +13,47 @@
 			<a href="{{ url_for('portfolio') }}">Portfolio</a>
 			<a href="{{ url_for('contact') }}" class="active">Contact</a>
 		  	<a href="{{ url_for('blog') }}">AI Blog</a>
-			<a id="github" href="https://github.com/Mroussell"><i class="fa fa-github"></i></a>  			  	
+			<a id="github" href="https://github.com/Mroussell"><i class="fa fa-github"></i></a> 
+			<a id="music" href="https://soundcloud.com/music-mjr"><i class="fa fa-music"></i></a>	 			  	
 		  	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		    	<i class="fa fa-bars"></i>
 		  	</a>
 		</div>
 
-		<div>
-			<h1>Michael J. Roussell</h1>
-			<p>Contact Information Page</p>
+		<div class="banner">
+			<div class="banner-img-div" id="banner-img-contact"></div>
+			<div class="banner-overlay-div" id="banner-overlay"> </div>
+			<div class="banner-icon-div" id="banner-icon"> </div>
+		</div>
+
+		<div class="title">
+			<h1>Contact Me</h1>
+		</div>
+
+		<div class="container">
+		  <form action="contact" method="post">
+
+		    <label for="full-name">Full Name</label>
+		    <input type="text" id="full-name" name="full-name" placeholder="Your full name...">
+
+		    <label for="subject">Subject</label>
+		    <input type="text" id="subject" name="subject" placeholder="The subject of your inquery...">
+
+		    <label for="email-address">Email</label>
+		    <input type="text" id="email-address" name="email-address" placeholder="Your email address...">
+		    
+		    <label for="message">Message</label>
+		    <textarea id="message" name="message" placeholder="Write your inquiry here.." style="height:194px"></textarea>
+
+		    <input type="submit" value="Submit">
+
+		  </form>
+		</div>
+
+		<div class="footer">
+			<footer>
+				<p>foot</p>
+			</footer>
 		</div>
 	</body>
 </html>
