@@ -1,7 +1,23 @@
+"""
+MJR
+Michael Roussell
+Copyright 2022
+
+Please run from this file.
+
+Python 3.9.7 version of the python interpreter.
+If there are any questions, please contact me at 'mjr.dev.contact@gmail.com.
+
+MIT Education License Preferred.
+"""
 import os
-from flask import Flask, render_template, request, redirect, session, url_for, jsonify
+from dotenv import load_dotenv
+from contact import ContactHandler
+from flask import Flask, flash, render_template, request, redirect, session, url_for, jsonify
 
 app = Flask(__name__)
+load_dotenv()
+app.secret_key = os.getenv("FLASK_SEC_KEY")
 
 @app.route("/") 
 def home():
@@ -18,8 +34,19 @@ def portfolio():
     return render_template("portfolio.html")
 
 
-@app.route("/contact") 
+@app.route("/contact", methods=['GET', 'POST']) 
 def contact():
+    cth = ContactHandler()
+    if request.method == 'POST':
+        print("start")
+        name = request.form["full-name"]
+        subject = request.form["subject"]
+        subject = name + " | " + subject
+        body = request.form["message"] + "\n ~ " + request.form["email-address"]
+        print(f"Email Subject: {subject}")
+        print(f"Email Body: {body}")
+        cth.sendContactEmail(subject, body)
+        flash("We got your message and will be in touch soon. Thank you!")
     return render_template("contact.html")
 
 
