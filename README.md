@@ -10,7 +10,7 @@ Deployment: https://mjrtech.herokuapp.com/
 
 This is a Python Flask Web Server that acts as my personal portfolio and a base for any of my on going projects.
 All back-end applications and server rendered are done using python and namely the flask library.
-To not rely on javascript, the front-end of the site site is styled and completely coded with HTML5 and CSS4.
+To not rely on javascript to much, the front-end of the site site is styled and completely coded with HTML5 and CSS4 except for automation scripts.
 Styling and formatting webpages is not my strong suit an thus i wanted to keep the styling as simple and elegent as possible.
 Managing the deployment and backend of the site are all pyhton utilies and as light weight as possble back-end dependencies as well as a postgreSQL database for managing any data that runs through the sites.
 
