@@ -47,6 +47,7 @@ def contact():
         print(f"Email Body: {body}")
         cth.sendContactEmail(subject, body)
         flash("We got your message and will be in touch soon. Thank you!")
+        return render_template("contact.html",  scrollToAnchor="flashes")
     return render_template("contact.html")
 
 
