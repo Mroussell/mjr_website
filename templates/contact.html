@@ -7,6 +7,13 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
+		{% if scrollToAnchor %}
+		<script>
+		    document.addEventListener("DOMContentLoaded", function() {
+		        document.location.hash = '#{{ scrollToAnchor }}';
+		    });
+		</script>
+		{% endif %}
 
 		<div class="topnav" id="myTopnav">
 			<a href="{{ url_for('home') }}" >Home</a>
@@ -44,8 +51,19 @@
 		    
 		    <label for="message">Message</label>
 		    <textarea id="message" name="message" placeholder="Write your inquiry here.." style="height:194px"></textarea>
+		    <div class="update">
+		    	<input type="submit" value="Submit">
+	    		{% with messages = get_flashed_messages() %}
+	    		  {% if messages %}
+	    		    <ul class="flashes" id="flashes">
+	    		    {% for message in messages %}
+	    		      <p class="contact-flash">{{ message }}</p>
+	    		    {% endfor %}
+	    		    </ul>
+	    		  {% endif %}
+	    		{% endwith %}
+		    </div>
 
-		    <input type="submit" value="Submit">
 
 		  </form>
 		</div>
