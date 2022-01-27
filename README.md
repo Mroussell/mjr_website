@@ -9,10 +9,10 @@ Deployment: https://mjrtech.herokuapp.com/
 # What is 'MJRdev.info'?
 
 This is a Python Flask Web Server that acts as my personal portfolio and a base for any of my on going projects.
-All back-end applications and server rendered are done using python and namely the flask library.
-To not rely on javascript to much, the front-end of the site site is styled and completely coded with HTML5 and CSS4 except for automation scripts.
+All back-end applications and server renders are done using python and namely the flask library.
+To not rely on javascript to much, the front-end of the site site is styled and almost completely coded with HTML5 and CSS except for automation scripts.
 Styling and formatting webpages is not my strong suit an thus i wanted to keep the styling as simple and elegent as possible.
-Managing the deployment and backend of the site are all pyhton utilies and as light weight as possble back-end dependencies as well as a postgreSQL database for managing any data that runs through the sites.
+Managing the deployment and backend of the site are all pyhton utilies and are as light weight as possble, back-end dependencies as well as a postgreSQL database for managing any data that runs through the sites.
 
 # How to run this app
 
@@ -27,4 +27,4 @@ If you have and question of inquires please add a thread to this repository or r
 
 # License
 
-This site is licensed The MIT License (MIT).
+This site is licensed via The MIT License (MIT).
