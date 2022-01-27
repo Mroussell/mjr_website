@@ -312,6 +312,9 @@ input[type=submit]:hover {
 }
 
 /*----- Footer Styling -----*/
+.foot-start {
+  background-color: #141514;
+}
 /* The grid container */
 .grid-container {
   display: grid;
@@ -320,7 +323,7 @@ input[type=submit]:hover {
     'left left left left right right' 
     'footer footer footer footer footer footer';
   /* grid-column-gap: 10px; - if you want gap between the columns */
-  background-color: #121212;
+  
   margin-left: 22%;
   margin-right: 22%;
 } 
@@ -350,7 +353,6 @@ ul {
 /* Style the footer */
 .footer {
   grid-area: footer;
-  background-color: #121212;
   padding: 10px;
   text-align: center;
 }
