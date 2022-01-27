@@ -16,18 +16,30 @@ from dotenv import load_dotenv
 
 class ContactHandler:
 
-	def sendContactEmail(self, subject, body):
+	def sendContactEmail(self, subject:str, body:str):
+		"""
+		Function that initializes sending a contact email through contact form.
+
+		Parameter
+		---------
+			subject : String (required)
+				A String Object that contains the subject of the sending contact email.
+			body : String (required)
+				A String object that contains the body of the email and return email address.
+		"""
+
 		# Load environment for email auth.
 		load_dotenv()
 		email_acc = os.getenv("EMAIL_ACC")
 		email_pas = os.getenv("EMAIL_PASS")
 
-		# Set up message information
+		# Set up message information.
 		sender = email_acc
 		to = email_acc
 		sub = subject
 		bod = body
 
+		# Set up email styling.
 		email_text = 'Subject: {}\n\n{}'.format(sub, bod)
 
 		try:
