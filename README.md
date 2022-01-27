@@ -28,3 +28,7 @@ If you have and question of inquires please add a thread to this repository or r
 # License
 
 This site is licensed via The MIT License (MIT).
+
+# 3rd Party Help
+
+To keep the site from sleeping on Heroku's free dyno, https://kaffeine.herokuapp.com/ was use to ping the site every 30 minutes and to sleep from 00:00 to 06:00 EST.
