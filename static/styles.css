@@ -311,7 +311,80 @@ input[type=submit]:hover {
   display: inline-block;
 }
 
+/*----- Footer Styling -----*/
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left left left left right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+  background-color: #121212;
+  margin-left: 22%;
+  margin-right: 22%;
+} 
+
+.left,
+.right {
+  padding: 10px;
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  max-width: 60%;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  width: 40%;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #121212;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+  ul {
+  list-style: none;
+  padding: 0px;
+}
+}
+
+.foot-link {
+  color: inherit;
+  text-decoration: none;
+  transition: 500ms;
+}
+
+.foot-link:hover {
+  margin-left: 3px;
+  color: #FF7F00;
+  text-decoration: none;
+
+}
+
 .flashes p {
   color: #1180ff;
 }
+
 
