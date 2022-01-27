@@ -308,46 +308,39 @@ input[type=submit]:hover {
 
 
 /*----- Footer Styling -----*/
-/* Style the foot-header */
-.foot-header {
-  grid-area: header;
-  background-color: #121212;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-}
-
 /* The grid container */
 .grid-container {
   display: grid;
   grid-template-areas: 
     'header header header header header header' 
-    'left left middle middle right right' 
+    'left left left left right right' 
     'footer footer footer footer footer footer';
   /* grid-column-gap: 10px; - if you want gap between the columns */
-  background-color: #1e1e1f;
+  background-color: #121212;
+  margin-left: 22%;
+  margin-right: 22%;
 } 
 
 .left,
-.middle,
 .right {
   padding: 10px;
-  
 }
 
 /* Style the left column */
 .left {
   grid-area: left;
-}
-
-/* Style the middle column */
-.middle {
-  grid-area: middle;
+  max-width: 60%;
 }
 
 /* Style the right column */
 .right {
   grid-area: right;
+  width: 40%;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
 }
 
 /* Style the footer */
@@ -364,12 +357,26 @@ input[type=submit]:hover {
     grid-template-areas: 
       'header header header header header header' 
       'left left left left left left' 
-      'middle middle middle middle middle middle' 
       'right right right right right right' 
       'footer footer footer footer footer footer';
   }
+  ul {
+  list-style: none;
+  padding: 0px;
+}
 }
 
+.foot-link {
+  color: inherit;
+  text-decoration: none;
+  transition: 500ms;
+}
 
+.foot-link:hover {
+  margin-left: 3px;
+  color: #FF7F00;
+  text-decoration: none;
+
+}
 
 

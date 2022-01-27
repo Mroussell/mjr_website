@@ -2,12 +2,22 @@
 <link rel="stylesheet" href="static/styles.css" type="text/css">
 <!-- Site footer -->
 <div class="grid-container">
-  <div class="foot-header">
-    <h2>MJR</h2>
+    <div class="left">
+  	<h3>About</h3>
+  	<hr>
+  	<p>This is just a site I coded up to show off my software projects and some other interests. Feel free to have a look around and don't forget to checkout my youtube and music when you get a chance!</p>
+  </div> 
+  <div class="right">
+  	<h3>Links</h3>
+  	<hr>
+  	<ul id="foot-links">
+  		<li><a class="foot-link" href="{{ url_for('home') }}">Home</a></li>
+  		<li><a class="foot-link" href="{{ url_for('portfolio') }}" >Portfolio</a></li>
+  		<li><a class="foot-link" href="{{ url_for('contact') }}">Contact</a></li>
+  		<li><a class="foot-link" href="https://github.com/Mroussell">GitHub</a></li>
+  		<li><a class="foot-link" href="https://soundcloud.com/music-mjr">Music</a></li>
+  	</ul>
   </div>
-  
-  <div class="left">About</div> 
-  <div class="right">Links</div>
   
   <div class="footer">
   	<p>Copyright © 2022 Michael James Roussell All Rights Reserved.</p>
