@@ -15,14 +15,6 @@ body {
   src: url(./fonts/Forum-Regular.ttf);
 }
 
-hr.rounded {
-  border-top: 5px solid #1b1b1fe0;
-  border-bottom: 5px solid #1b1b1fe0;
-  border-radius: 10px;
-  margin-right: 2%;
-  margin-left: 2%;
-}
-
 /*-----Top Navigation Styling-----*/
 /* Add a black background color to the top navigation */
 .topnav {
@@ -110,12 +102,13 @@ hr.rounded {
 }
 .banner-title-div {
   vertical-align: bottom;
-  display: flex;
+  display: grid;
   justify-content: center;
   opacity: 0;
   transition: 300ms;
   background-position: center;
-  background-attachment: scroll;
+  background-attachment: local;
+  vertical-align: middle;
 }
 
 .banner:hover .banner-title-div {
@@ -234,12 +227,20 @@ a.banner-link {
 }
 
 .banner-title-div span.border {
-  background-color: #eee;
-  color: #101010;
+  border-radius: 5px;
+  display: flex;
+  background-color: #fefefe;
+  color: #010101;
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
-  vertical-align: bottom;
+  position: relative;
+  transform: translateY(248px);
+  transition: 300ms;
+}
+.banner-title-div span.border:hover {
+  background-color: #00274e87;
+  color: #fefefe;
 }
 
 /*----- Title and Description Styling -----*/
