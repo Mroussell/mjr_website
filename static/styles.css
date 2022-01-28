@@ -229,7 +229,7 @@ a.banner-link {
 .banner-title-div span.border {
   border-radius: 5px;
   display: flex;
-  background-color: #fefefe;
+  background-color: #fefefeb0;
   color: #010101;
   padding: 18px;
   font-size: 25px;
