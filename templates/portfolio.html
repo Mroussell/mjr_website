@@ -20,9 +20,28 @@
 		  	</a>
 		</div>
 
-		<div>
-			<h1>Michael J. Roussell</h1>
-			<p>Portfolio Page</p>
+		<div class="banner">
+			<div class="banner-img-div" id="banner-img-portfolio"></div>
+			<div class="banner-overlay-div" id="banner-overlay"> </div>
+		</div>
+
+		<div class="title">
+			<h1>Portfolio</h1>
+		</div>
+
+		<div class="cards">
+			<div class="port-card-bg" id="tech-card">
+				<div class="card-div">
+					<span class="card-title" id="tech-title">Technical Projects</span>
+				</div>
+				<a href="{{ url_for('tech') }}" class="banner-link"></a> 
+			</div>
+			<div class="port-card-bg" id="data-card"> 
+				<div class="card-div">
+					<span class="card-title" id="data-title">Data Projects</span>
+				</div> 
+				<a href="{{ url_for('data') }}" class="banner-link"></a>
+			</div>
 		</div>
 		
 		<div class="foot">
