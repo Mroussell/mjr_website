@@ -49,23 +49,47 @@ class DBHandler:
 		Used the psycopg2 init functions to create table if one does not already exist. If it does throw error and pass.
 
 		"""
-		connect = self.initdbconnect(self)
-		cursor = self.initdbcursor(self, connect)
+		connect = self.initdbconnect()
+		cursor = self.initdbcursor(connect)
 		try:
-			cursor.execute('''CREATE TABLE IF NOT EXIST 'tech_projects' (
-			    POST_ID varchar(100),
-			    POST_IMG text[],
+			cursor.execute('''CREATE TABLE IF NOT EXISTS tech_projects_test (
+			    POST_ID SERIAL NOT NULL,
+			    POST_IMG_Loc text,
 			    TITLE varchar(100),
 			    BODY text,
 			    PRIMARY KEY (POST_ID)
 				);''')
 			connect.commit()
 			connect.close()
+			print(f"Table Created!")
 			return
 		except ValueError:
-			print("Table Creation error. Either already exist or other.")
+			print(f"Table Creation error. Either already exist or other. \n{ValueError}")
 			connect.commit()
 			connect.close()
 			pass
 
+	
+	def inspect_table(self):
+		"""
+		Used the psycopg2 init functions to inspect table if one does not already exist. If it does throw error and pass.
+
+		"""
+		connect = self.initdbconnect()
+		cursor = self.initdbcursor(connect)
+		try:
+			cursor.execute('''SELECT * FROM tech_projects_test;''')
+			connect.commit()
+			connect.close()
+			print(f"Table Inspected!")
+			return
+		except ValueError:
+			print(f"Table Creation error. Either already exist or other. \n{ValueError}")
+			connect.commit()
+			connect.close()
+			pass		
+
+
+bdh = DBHandler()
+bdh.inspect_table()
 
