@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Data Projects Page</title>
+		<link rel="stylesheet" href="../static/styles.css" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="topnav" id="myTopnav">
+			<a href="{{ url_for('home') }}">Home</a>
+			<a href="{{ url_for('portfolio') }}" class="active">Portfolio</a>
+			<a href="{{ url_for('contact') }}">Contact</a>
+		  	<a href="{{ url_for('blog') }}">AI Blog</a>
+			<a id="github" href="https://github.com/Mroussell"><i class="fa fa-github"></i></a>
+			<a id="music" href="https://soundcloud.com/music-mjr"><i class="fa fa-music"></i></a>			  	
+		  	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		    	<i class="gotopage"></i>
+		  	</a>
+		</div>
+
+		<div class="banner">
+			<div class="banner-img-div" id="banner-img-tech"></div>
+			<div class="banner-overlay-div" id="banner-overlay"> </div>
+		</div>
+
+		<div class="foot">
+			{% include 'footer.html' %}
+		</div>
+	</body>
+</html>

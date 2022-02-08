@@ -8,6 +8,7 @@ body {
   padding: 0;
   background-color: #121212;
   color: #ededed;
+  font-family: Forum;
 }
 
 @font-face {
@@ -193,7 +194,38 @@ a.banner-link {
   background-size: cover;
   object-fit: fill;
 }
+#banner-img-portfolio {
+  width: 100%;
+  height: 824px;
+  background-color: darkgrey;
+  background-position: center;
+  background-image: url(../static/images/portfolio_banner.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  object-fit: fill;
+}
 
+#banner-img-tech {
+  width: 100%;
+  height: 824px;
+  background-color: darkgrey;
+  background-position: center;
+  background-image: url(../static/images/tech_project.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  object-fit: fill;
+}
+
+#banner-img-data {
+  width: 100%;
+  height: 824px;
+  background-color: darkgrey;
+  background-position: center;
+  background-image: url(../static/images/data_project.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  object-fit: fill;
+}
 
 /* Gradient overlay grid styping for banner object*/
 .banner-overlay-div { grid-area: 1 / 1 / 2 / 2; }
@@ -368,9 +400,9 @@ ul {
       'footer footer footer footer footer footer';
   }
   ul {
-  list-style: none;
-  padding: 0px;
-}
+    list-style: none;
+    padding: 0px;
+  }
 }
 
 .foot-link {
@@ -390,4 +422,53 @@ ul {
   color: #1180ff;
 }
 
+/* ----- Portfolio Page Grid Layout ----- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 75vh;
+}
+
+.port-card-bg {
+  margin: 40px;
+  border-radius: 10px;
+  background-color: #1e1e1f;
+  color: #f7f6f6;
+  padding: 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+  transition: 300ms;
+}
+
+.port-card-bg:hover {
+  margin: 30px;
+}
+
+.card-div {
+  margin: 5%;
+  object-position: center;
+}
+
+.card-title {
+  border-radius: 5px;
+  background-color: #fefefeb0;
+  color: #010101;
+  padding: 10px;
+  font-size: 25px;
+  letter-spacing: 6px;
+}
+
+#tech-card {
+  grid-area: 1 / 1 / 2 / 2;
+  background-image: url(../static/images/tech_project.jpg);
+  background-size: cover;
+}
+
+#data-card {
+  grid-area: 1 / 2 / 2 / 3; 
+  background-image: url(../static/images/data_project.jpg);
+  background-size: cover;
+}
 

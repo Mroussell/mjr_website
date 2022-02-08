@@ -25,9 +25,9 @@ def home():
 
 @app.route("/portfolio", methods=['GET', 'POST']) 
 def portfolio():
+
     if request.method == 'POST':
         # do stuff when the form is submitted
-
         # redirect to end the POST handling
         # the redirect can be to the same route or somewhere else
         return redirect(url_for('home.html'))
@@ -54,6 +54,15 @@ def contact():
 @app.route("/blog") 
 def blog():
     return render_template("blog.html")
+
+
+@app.route("/portfolio/tech") 
+def tech():
+    return render_template("tech-page.html")
+
+@app.route("/portfolio/data") 
+def data():
+    return render_template("data-page.html")
 
 
 # If running from this file, run flask app.
