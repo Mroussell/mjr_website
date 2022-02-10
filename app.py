@@ -19,9 +19,10 @@ app = Flask(__name__)
 load_dotenv()
 app.secret_key = os.getenv("FLASK_SEC_KEY")
 
-@app.route("/") 
+@app.route("/", strict_slashes=False)
 def home():
     return render_template("home.html")
+
 
 @app.route("/portfolio", methods=['GET', 'POST']) 
 def portfolio():
