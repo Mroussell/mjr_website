@@ -92,7 +92,7 @@ class DBHandler:
 			query = "SELECT * FROM "+ table_name + ";"
 			cursor.execute(query)
 			results = cursor.fetchall()
-			post_json = json.dumps(results, indent=4)
+			post_json = json.dumps(results, indent=2)
 			print(str(type(post_json)) + " ~ containing:")
 			print(post_json)
 			connect.commit()
@@ -108,10 +108,10 @@ class DBHandler:
 
 	def add_post(self, title:str, body:str, img_loc:str):
 		"""
-		Used the psycopg2 init functions to add a post to a table. If it throw error and pass.
+		Used the psycopg2 init functions to add a post to a table. If throws error, pass.
 
-		Parameter
-		---------
+		Parameters
+		----------
 			title : string (required)
 				A String object that holds the title of the post, under 100 characters.
 			body : string (required)
@@ -131,10 +131,41 @@ class DBHandler:
 			print(f"Table Insert Complete!")
 			return
 		except ValueError:
-			print(f"Table Creation error. Either already exist or other. \n{ValueError}")
+			print(f"Post creation error. Either already exist or other. \n{ValueError}")
 			connect.commit()
 			connect.close()
-			pass	
+			pass
+
+
+	def del_post(self, post_id:int, table_name:str):
+		"""
+		Use the psycopg2 init function to delete a post from table. If throws error, pass.
+
+		Parameters
+		----------
+			post_id : int (required)
+				An integer object that represents the post id column identifier to be deleted.
+			table_name: string (required)
+				A String object that indentifies the table for which row should be deleted.
+		"""	
+		connect = self.initdbconnect()
+		cursor = self.initdbcursor(connect)
+		if post_id <= 0:
+			print(type(post_id))
+			print(f"POST_ID {post_id} needs to be greater than 0.")
+			return 
+		try:
+			query = "DELETE FROM " + table_name + " WHERE POST_ID = " + str(post_id) + ";"
+			cursor.execute(query)
+			connect.commit()
+			connect.close()
+			print(f"Table Deletion Complete! POST_ID {post_id} removed")
+		except ValueError:
+			print(f"Post deletion error. Either already exist or other. \n{ValueError}")
+			connect.commit()
+			connect.close()
+			pass
+
 
 dbh = DBHandler()
 table_name = 'tech_projects_test'
@@ -143,4 +174,5 @@ test_body = "To start off the new year in 2022 and my journey into tech, I've de
 test_img_loc = 'static/images/thumbs/website_thumb.png'
 # dbh.add_post(test_title, test_body, test_img_loc)
 dbh.inspect_table(table_name)
+# dbh.del_post(2, table_name)
 
