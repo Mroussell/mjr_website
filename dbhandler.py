@@ -169,10 +169,10 @@ class DBHandler:
 
 dbh = DBHandler()
 table_name = 'tech_projects_test'
-test_title = 'Building a Flask Web App from Scratch'
-test_body = "To start off the new year in 2022 and my journey into tech, I've decided to begin by creating a portfolio site for me to store all my projects and talk about them, the challanges I faced creating them, and the technologies I explored using them. So to start off, I wanted to make this site almost completely from scratch. So after some research, I landed on using the Python micro framework, Flask, as the backend server for this site, as it is light weight, quick to start, and easy to maintain. Using Flask allows for HTML and CSS to be set up on a Heroku Deployment quickly and with little maintaince. I..."
-test_img_loc = 'static/images/thumbs/website_thumb.png'
-# dbh.add_post(test_title, test_body, test_img_loc)
+# test_title = 'Building a Flask Web App from Scratch'
+# test_body = "To start off the new year in 2022 and my journey into tech, I've decided to begin by creating a portfolio site for me to store all my projects and talk about them, the challanges I faced creating them, and the technologies I explored using them. So to start off, I wanted to make this site almost completely from scratch. So after some research, I landed on using the Python micro framework, Flask, as the backend server for this site, as it is light weight, quick to start, and easy to maintain. Using Flask allows for HTML and CSS to be set up on a Heroku Deployment quickly and with little maintaince. I..."
+# test_img_loc = 'static/images/thumbs/website_thumb.png'
+# # dbh.add_post(test_title, test_body, test_img_loc)
 dbh.inspect_table(table_name)
-# dbh.del_post(2, table_name)
+# # dbh.del_post(2, table_name)
 
