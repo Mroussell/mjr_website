@@ -6,5 +6,9 @@ __pycache__/
 MacOS Files
 .DS_Store
 
+# Post Directory
+.new_posts
+
+
 # Env Files
 .env
