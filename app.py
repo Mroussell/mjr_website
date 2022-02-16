@@ -13,6 +13,7 @@ MIT Education License Preferred.
 import os
 from dotenv import load_dotenv
 from contact import ContactHandler
+from dbhandler import DBHandler
 from flask import Flask, flash, render_template, request, redirect, session, url_for, jsonify
 
 app = Flask(__name__)
@@ -39,7 +40,7 @@ def portfolio():
 def contact():
     cth = ContactHandler()
     if request.method == 'POST':
-        print("start")
+        print("Initialize Email")
         name = request.form["full-name"]
         subject = request.form["subject"]
         subject = name + " | " + subject
@@ -59,7 +60,12 @@ def blog():
 
 @app.route("/portfolio/tech") 
 def tech():
-    return render_template("tech-page.html")
+    dbh = DBHandler()
+    db_results = dbh.inspect_table('tech_projects_test_3')
+    post_list = []
+    for post in db_results:
+        post['body'] =  post['body'].replace('\\n', '\n\n').replace('\\t', '\t')
+    return render_template("tech-page.html", db_results=reversed(db_results))
 
 @app.route("/portfolio/data") 
 def data():
