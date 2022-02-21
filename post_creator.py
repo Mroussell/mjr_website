@@ -33,6 +33,10 @@ for file in glob.glob("*.txt"):
 		file_json = json.load(tf)
 		post_json_files.append(file_json)
 
+# Gather table name input
+table_name = input("Give Table Name for Post Add, \nEither 'tech_projects_live' or 'data_projects_live':")
+
+
 # Post are added in proper json form
 dbh = DBHandler()
 for post in post_json_files:
@@ -40,7 +44,7 @@ for post in post_json_files:
 	body = post['body']
 	img_loc = post['post_img_loc']
 	repo_link = post['repo_link']
-	dbh.add_post('tech_projects_test_3',title, body, img_loc, repo_link)
+	dbh.add_post(table_name,title, body, img_loc, repo_link)
 	print(f"Added post with title: {title}")
 
 # If added argument for clear directory

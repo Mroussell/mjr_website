@@ -95,13 +95,10 @@ class DBHandler:
 			query = "SELECT * FROM "+ table_name + ";"
 			cursor.execute(query)
 			results = cursor.fetchall()
-			post_json = json.dumps(results, indent=2)
-			print(str(type(post_json)) + " ~ containing:")
-			print(post_json)
 			connect.commit()
 			connect.close()
 			print(f"Table Inspected!")
-			return post_json
+			return results
 		except ValueError:
 			print(f"Table Creation error. Either already exist or other. \n{ValueError}")
 			connect.commit()
@@ -212,3 +209,7 @@ class DBHandler:
 # dbh.inspect_table(table_name)
 # # dbh.del_post(1, table_name)
 
+# '''Create True Tables'''
+# dbh = DBHandler()
+# table_name = 'data_projects_live'
+# dbh.create_table(table_name)
