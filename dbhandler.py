@@ -209,3 +209,7 @@ class DBHandler:
 # dbh.inspect_table(table_name)
 # # dbh.del_post(1, table_name)
 
+# '''Create True Tables'''
+# dbh = DBHandler()
+# table_name = 'data_projects_live'
+# dbh.create_table(table_name)

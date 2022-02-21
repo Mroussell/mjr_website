@@ -23,15 +23,23 @@
 			<div class="banner-overlay-div" id="banner-overlay"> </div>
 		</div>
 
-		<div class="banner">
-			<div class="banner-img-div" id="banner-img-construction"></div>
-			<div class="banner-overlay-div" id="banner-overlay"> </div>
-			<div class="banner-icon-div" id="banner-icon-construction"> </div>
-		</div>
-
 		<div class="title">
 			<h1>Data Science Projects </h1>
-			<h2>This page is currently under construction or renovation. Come back soon to see the new content!</h2>
+		</div>
+		
+		<div class="posts">
+			{% for post in db_results%}
+			  <div class="post-card">
+				<div class="post-title">
+					<h2>{{ post['title'] }}</h2>
+					<img src="../{{ post['post_img_loc'] }}" class="post-img"></img>
+				</div>
+				<p>
+					{% autoescape false %} {{ post['body'] | replace('\n', '<br>') }} {% endautoescape %}
+				</p>
+				<a class="repo-link" href="{{ post['repo_link'] }}">Project Repo</a>
+			  </div>
+			{% endfor %}
 		</div>
   
 		<div class="foot">

@@ -61,7 +61,7 @@ def blog():
 @app.route("/portfolio/tech") 
 def tech():
     dbh = DBHandler()
-    db_results = dbh.inspect_table('tech_projects_test_3')
+    db_results = dbh.inspect_table('tech_projects_live')
     post_list = []
     for post in db_results:
         post['body'] =  post['body'].replace('\\n', '\n\n').replace('\\t', '\t')
@@ -69,7 +69,12 @@ def tech():
 
 @app.route("/portfolio/data") 
 def data():
-    return render_template("data-page.html")
+    dbh = DBHandler()
+    db_results = dbh.inspect_table('data_projects_live')
+    post_list = []
+    for post in db_results:
+        post['body'] =  post['body'].replace('\\n', '\n\n').replace('\\t', '\t')
+    return render_template("data-page.html", db_results=reversed(db_results))
 
 
 # If running from this file, run flask app.
