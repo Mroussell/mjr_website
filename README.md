@@ -6,7 +6,7 @@ Here I have created a Flask Python, HTML, and CSS web app that serves as a portf
 
 Deployment: https://mjrtech.herokuapp.com/
 
-# What is 'MJRdev.info'?
+# What is 'MJRtech'?
 
 This is a Python Flask Web Server that acts as my personal portfolio and a base for any of my on going projects.
 All back-end applications and server renders are done using python and namely the flask library.
@@ -27,8 +27,8 @@ If you have and question of inquires please add a thread to this repository or r
 
 # License
 
-This site is licensed via The MIT License (MIT).
+This site and its source is licensed via The MIT License (MIT).
 
-# 3rd Party Help
+# 3rd Party Tools
 
 To keep the site from sleeping on Heroku's free dyno, https://kaffeine.herokuapp.com/ was use to ping the site every 30 minutes and to sleep from 00:00 to 06:00 EST.
