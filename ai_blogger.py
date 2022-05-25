@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 class BloggerAI:
     def generate_topics(self, topic:str):
         """
-		Use Open AI API functions  and parsing to genreate a weeks worth of topics for blogging.
+		Use Open AI API functions and parsing to genreate a weeks worth of topics for blogging.
 
         Parameter
 		---------
